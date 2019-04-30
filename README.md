@@ -53,7 +53,13 @@ if it requires G Suite user to belong to certain Google Groups to access that sp
 
 ## Deploy
 1. Create a new GCP project.
-2. `pip install -t lib -r requirements.txt`
+    a. Navigate to App Engine
+    b. Create Application
+    c. Language selection - Python
+2. Clone this project and switch to that directory
+    a. make sure you are signed in - Cloud SDK should be installed
+    b. init and deploy your App (currently this is using the `gcloud init` and `gcloud app deploy` commands)
+    c. install the required [third party libraries](https://cloud.google.com/appengine/docs/standard/python/tools/using-libraries-python-27) using: `pip install -t lib -r requirements.txt`
 3. Copy `config.py.example` to `config.py` and modify accordingly
 4. `gcloud app deploy app.yaml`
 5. Go to GCP app engine settings, set `Google authentication` to `Google Apps domain` for
